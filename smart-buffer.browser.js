@@ -156,7 +156,7 @@
 
     const stringWriters = {
         /**
-         * Writes a *(null terminated)* utf-8 string.
+         * Writes a utf-8 string.
          *
          * @param {SmartBuffer} buffer SmartBuffer instance to written to.
          * @param {string} value Value to be written.
@@ -172,7 +172,7 @@
             }
 
             for (let i = 0; i < l; i++) {
-                // optimization
+                /* optimization */
                 writers.u8.call(
                     buffer.view,
                     byteOffset + i,
@@ -182,7 +182,7 @@
         },
 
         /**
-         * Writes a *(null terminated)* utf-16 string.
+         * Writes a utf-16 string.
          *
          * @param {SmartBuffer} buffer SmartBuffer instance to written to.
          * @param {string} value Value to be written.
@@ -198,7 +198,7 @@
             }
 
             for (let i = 0; i < l; i++) {
-                // optimization
+                /* optimization */
                 writers.u16.call(
                     buffer.view,
                     byteOffset + i * 2,
