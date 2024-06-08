@@ -93,7 +93,7 @@ export type Encoding = 'utf8' | 'ut16';
 
 const stringReaders = {
     /**
-     * Reads a *(null terminated)* utf-8 string.
+     * Reads a utf-8 string.
      *
      * @param {SmartBuffer} buffer SmartBuffer instance to read from.
      * @param {number?} [byteOffset] Optional offset to read from.
@@ -124,7 +124,7 @@ const stringReaders = {
     },
 
     /**
-     * Reads a *(null terminated)* utf-16 string.
+     * Reads a utf-16 string.
      *
      * @param {SmartBuffer} buffer SmartBuffer instance to read from.
      * @param {number?} [byteOffset] Optional offset to read from.
@@ -173,7 +173,7 @@ const stringWriters = {
         }
 
         for (let i = 0; i < l; i++) {
-            // optimization
+            /* optimization */
             writers.u8.call(buffer.view, byteOffset + i, value.charCodeAt(i));
         }
     },
@@ -195,7 +195,7 @@ const stringWriters = {
         }
 
         for (let i = 0; i < l; i++) {
-            // optimization
+            /* optimization */
             writers.u16.call(
                 buffer.view,
                 byteOffset + i * 2,
