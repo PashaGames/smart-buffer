@@ -89,7 +89,7 @@ const ensureCapacity = (buffer: SmartBuffer, size: number) => {
     }
 };
 
-export type Encoding = 'utf8' | 'ut16';
+export type Encoding = 'utf8' | 'utf16';
 
 const stringReaders = {
     /**
